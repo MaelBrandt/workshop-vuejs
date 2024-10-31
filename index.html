@@ -24,7 +24,12 @@
       <a v-bind:href="url">{{ title }}</a>
       <p>{{desc}}</p> 
       <img height="200" v-bind:src="image" />
+
       <p v-if="inStock">Disponible</p>
+      <p v-else>Plus de stock</p>
+
+      <p v-if="stock > 10">Disponible</p>
+      <p v-else-if="stock <= 10 && stock > 0">Peu de stock</p>
       <p v-else>Plus de stock</p>
     </div>
 
