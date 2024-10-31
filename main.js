@@ -5,6 +5,7 @@ const app = Vue.createApp({
         desc: "L'histoire de NESPRESSO est celle d'une passion inaltérable pour la perfection et d'une quête inlassable d'innovation en faveur de la plus haute qualité.",
         image: 'assets\\images\\colombia.png',
         url: "https://www.nespresso.com/ch/fr/",
+        cart: 0,
         onSale: true,
         inStock: true,
         stock: 5,

@@ -25,8 +25,12 @@
       <p>{{desc}}</p> 
       <img height="200" v-bind:src="image" />
 
+      <!-- v-on:click fail la même chose que @click -->
+      <button @click="cart += 1">Ajouter au panier</button>
+      <div>panier({{ cart }})</div>
+      
       <div v-show="onSale">
-        En Vente !
+        <br/>En Vente !
 
         <p v-if="inStock">Disponible</p>
         <p v-else>Plus de stock</p>
