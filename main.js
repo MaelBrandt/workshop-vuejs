@@ -27,6 +27,23 @@ const app = Vue.createApp({
               text: 'Paquet',
             }
           ],
+        packets: [
+            {
+              id: 1,
+              quantity: 10,
+              price: 9.95,
+            },
+            {
+              id: 2,
+              quantity: 30,
+              price: 24.95,
+            },
+            {
+              id: 3,
+              quantity: 50,
+              price: 39.95,
+            }
+        ],
       };
     },
   });

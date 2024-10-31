@@ -45,6 +45,12 @@
       <div v-for="carouselImage in carouselImages" :key="carouselImage.id">
         {{ carouselImage.text }}
       </div>
+
+      <strong><br/>Paquets</strong>
+      <div v-for="packet in packets" :key="packets.id">
+        quantité : {{ packet.quantity }}
+        prix : {{ packet.price}} €
+      </div>
     </div>
 
     <!--Bootstrap-->
