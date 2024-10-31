@@ -26,7 +26,7 @@
       <img height="200" v-bind:src="image" />
 
       <!-- v-on:click fail la même chose que @click -->
-      <button @click="cart += 1">Ajouter au panier</button>
+      <button @click="addToCart">Ajouter au panier</button>
       <div>panier({{ cart }})</div>
       
       <div v-show="onSale">

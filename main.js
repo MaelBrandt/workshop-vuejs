@@ -47,4 +47,9 @@ const app = Vue.createApp({
         ],
       };
     },
+    methods: {
+        addToCart: function() {
+            this.cart += 1;
+        },
+    }
   });
