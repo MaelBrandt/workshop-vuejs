@@ -21,7 +21,7 @@
   <body>
     <!--Point d'entrée de l'app Vue-->
     <div id="app">
-      {{ title }}
+      <a v-bind:href="url">{{ title }}</a>
       <p>{{desc}}</p> 
       <img height="200" v-bind:src="image" />
     </div>
