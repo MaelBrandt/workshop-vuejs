@@ -36,11 +36,15 @@
         <p v-else>Plus de stock</p>
       </div>
 
-      <h3>flaveur de nos caffés</h3>
+      <strong>flaveur de nos caffés</strong>
       <ul>
         <li v-for="detail in details">{{ detail }}</li>
       </ul>
 
+      <strong>Type d'objet en vente</strong>
+      <div v-for="carouselImage in carouselImages" :key="carouselImage.id">
+        {{ carouselImage.text }}
+      </div>
     </div>
 
     <!--Bootstrap-->

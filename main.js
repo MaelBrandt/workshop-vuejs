@@ -9,6 +9,24 @@ const app = Vue.createApp({
         inStock: true,
         stock: 5,
         details: ['Doux', 'Harmonieux'],
+        carouselImages: [
+            {
+              id: 1,
+              text: 'Capsule 1',
+            },
+            {
+              id: 2,
+              text: 'Capsule 2',
+            },
+            {
+              id: 3,
+              text: 'Tasse',
+            },
+            {
+              id: 4,
+              text: 'Paquet',
+            }
+          ],
       };
     },
   });
