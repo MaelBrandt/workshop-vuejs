@@ -27,7 +27,7 @@
 
       <div v-show="onSale">
         En Vente !
-        
+
         <p v-if="inStock">Disponible</p>
         <p v-else>Plus de stock</p>
   
@@ -35,6 +35,11 @@
         <p v-else-if="stock <= 10 && stock > 0">Peu de stock</p>
         <p v-else>Plus de stock</p>
       </div>
+
+      <h3>flaveur de nos caffés</h3>
+      <ul>
+        <li v-for="detail in details">{{ detail }}</li>
+      </ul>
 
     </div>
 

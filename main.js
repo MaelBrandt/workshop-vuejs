@@ -8,6 +8,7 @@ const app = Vue.createApp({
         onSale: true,
         inStock: true,
         stock: 5,
+        details: ['Doux', 'Harmonieux'],
       };
     },
   });
