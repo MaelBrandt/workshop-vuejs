@@ -24,6 +24,8 @@
       <a v-bind:href="url">{{ title }}</a>
       <p>{{desc}}</p> 
       <img height="200" v-bind:src="image" />
+      <p v-if="inStock">Disponible</p>
+      <p v-else>Plus de stock</p>
     </div>
 
     <!--Bootstrap-->
