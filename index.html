@@ -38,6 +38,7 @@
 
       <!-- v-on:click fail la même chose que @click -->
       <button @click="addToCart">Ajouter au panier</button>
+      <button @click="removeFromCart">Retirer du panier</button>
       <div>panier({{ cart }})</div>
       
       <div v-show="onSale">
