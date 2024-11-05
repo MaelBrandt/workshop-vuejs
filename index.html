@@ -54,9 +54,14 @@
 
       
 
-      <strong>flaveur de nos caffés</strong>
-      <ul>
-        <li v-for="detail in details">{{ detail }}</li>
+      <strong>flaveur de nos caffés</strong><ul>
+        <li
+          v-for="detail in details"
+          :key="detail.id"
+          :style="{ color: detail.color }"
+        >
+          {{ detail.text }}
+        </li>
       </ul>
 
       <strong><br/>Paquets</strong>

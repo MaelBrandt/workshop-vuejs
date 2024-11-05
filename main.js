@@ -9,7 +9,18 @@ const app = Vue.createApp({
         onSale: true,
         inStock: true,
         stock: 5,
-        details: ['Doux', 'Harmonieux'],
+        details: [
+          {
+            id: 1,
+            text: 'Doux',
+            color: '#6C99C6'
+          },
+          {
+            id: 2,
+            text: 'Harmonieux',
+            color: '#BF9E74'
+          }
+        ],
         carouselImages: [
             {
               id: 1,
