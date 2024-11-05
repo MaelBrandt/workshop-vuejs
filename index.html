@@ -28,9 +28,9 @@
       <img height="200" v-bind:src="image" :class="[stock <= 0 ? 'noStockImg' : '']"/>
       <div>
         <span
-          v-for="carouselImage in carouselImages"
+          v-for="(carouselImage, index) in carouselImages"
           :key="carouselImage.id"
-          @mouseover="updateImage(carouselImage.image)"
+          @mouseover="updateSelectedImage(index)" 
         >
           <img height="50" alt="carouselImage.text" :src="carouselImage.image" />
         </span>
@@ -44,7 +44,7 @@
         :class="{ disabledButton: stock <= 0 }"
       >Ajouter au panier</button>
       <button
-        @click="removeFromCart"
+        v-on:click="removeFromCart"
         :style="styles.roundButton"
         :disabled="stock <= 0"
         :class="{ disabledButton: stock <= 0 }"

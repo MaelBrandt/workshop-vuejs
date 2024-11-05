@@ -4,7 +4,7 @@ const app = Vue.createApp({
         action:  'Achat de café',
         brand:  'Nespresso',
         desc: "L'histoire de NESPRESSO est celle d'une passion inaltérable pour la perfection et d'une quête inlassable d'innovation en faveur de la plus haute qualité.",
-        image: 'assets\\images\\colombia.png',
+        selectedImage: 0,
         url: "https://www.nespresso.com/ch/fr/",
         cart: 0,
         onSale: true,
@@ -81,13 +81,16 @@ const app = Vue.createApp({
             this.cart -= 1;
           }
         },
-        updateImage: function(newImage) {
-            this.image = newImage;
+        updateSelectedImage: function(index) {
+           this.selectedImage = index;
         },
     },
     computed: {
       title() {
         return this.action + ' ' + this.brand
-      }
+      },
+      image() {
+        return this.carouselImages[this.selectedImage].image;
+      },
     },
   });
