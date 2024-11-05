@@ -8,7 +8,7 @@ const app = Vue.createApp({
         cart: 0,
         onSale: true,
         inStock: true,
-        stock: 11,
+        stock: 0,
         details: [
           {
             id: 1,

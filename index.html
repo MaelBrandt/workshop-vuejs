@@ -25,7 +25,7 @@
       <p>{{desc}}</p> 
 
       <strong>Type d'objet en vente</strong><br>
-      <img height="200" v-bind:src="image" />
+      <img height="200" v-bind:src="image" :class="[stock <= 0 ? 'noStockImg' : '']"/>
       <div>
         <span
           v-for="carouselImage in carouselImages"

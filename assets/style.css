@@ -6,3 +6,7 @@
 .cartFilled {
     color: rgb(17, 100, 0);
 }
+
+.noStockImg {
+    opacity: 0.5;
+}
