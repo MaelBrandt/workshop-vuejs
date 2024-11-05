@@ -49,7 +49,7 @@
         :disabled="stock <= 0"
         :class="{ disabledButton: stock <= 0 }"
       >Retirer du panier</button>
-      <div>panier({{ cart }})</div>
+      <div :class="[cart > 0 ? 'cartFilled' : '']">Panier({{ cart }})</div>
       
       <div v-show="onSale">
         <br/>En Vente !
