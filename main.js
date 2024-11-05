@@ -55,8 +55,8 @@ const app = Vue.createApp({
         addToCart: function() {
             this.cart += 1;
         },
-        updateImage: function(id) {
-            this.image = this.carouselImages[id].image
+        updateImage: function(newImage) {
+            this.image = newImage;
         },
     }
   });

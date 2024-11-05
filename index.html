@@ -23,7 +23,18 @@
     <div id="app">
       <a v-bind:href="url">{{ title }}</a>
       <p>{{desc}}</p> 
+
+      <strong>Type d'objet en vente</strong><br>
       <img height="200" v-bind:src="image" />
+      <div>
+        <span
+          v-for="carouselImage in carouselImages"
+          :key="carouselImage.id"
+          @mouseover="updateImage(carouselImage.image)"
+        >
+          <img height="50" alt="carouselImage.text" :src="carouselImage.image" />
+        </span>
+      </div>
 
       <!-- v-on:click fail la même chose que @click -->
       <button @click="addToCart">Ajouter au panier</button>
@@ -40,21 +51,12 @@
         <p v-else>Plus de stock</p>
       </div>
 
+      
+
       <strong>flaveur de nos caffés</strong>
       <ul>
         <li v-for="detail in details">{{ detail }}</li>
       </ul>
-
-      <strong>Type d'objet en vente</strong><br>
-      <div>
-        <span
-          v-for="carouselImage in carouselImages"
-          :key="carouselImage.id"
-          @mouseover="updateImage(carouselImage.image)"
-        >
-          <img height="50" alt="carouselImage.text" :src="carouselImage.image" />
-        </span>
-      </div>
 
       <strong><br/>Paquets</strong>
       <div v-for="packet in packets" :key="packets.id">
