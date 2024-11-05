@@ -60,6 +60,15 @@ const app = Vue.createApp({
               price: 39.95,
             }
         ],
+        styles: {
+          roundButton: {
+            borderRadius: '20px',
+            padding: '10px',
+            backgroundColor: 'rgb(0, 114, 180)',
+            color: 'white',
+            cursor: 'pointer'
+          }
+        },
       };
     },
     methods: {
