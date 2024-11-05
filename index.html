@@ -45,9 +45,15 @@
         <li v-for="detail in details">{{ detail }}</li>
       </ul>
 
-      <strong>Type d'objet en vente</strong>
-      <div v-for="carouselImage in carouselImages" :key="carouselImage.id">
-        {{ carouselImage.text }}
+      <strong>Type d'objet en vente</strong><br>
+      <div>
+        <span
+          v-for="carouselImage in carouselImages"
+          :key="carouselImage.id"
+          @mouseover="updateImage(carouselImage.image)"
+        >
+          <img height="50" alt="carouselImage.text" :src="carouselImage.image" />
+        </span>
       </div>
 
       <strong><br/>Paquets</strong>

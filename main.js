@@ -14,18 +14,22 @@ const app = Vue.createApp({
             {
               id: 1,
               text: 'Capsule 1',
+              image: './assets/images/colombia.png',
             },
             {
-              id: 2,
+              id:  2,
               text: 'Capsule 2',
+              image: './assets/images/colombia_de_cote.png',
             },
             {
               id: 3,
               text: 'Tasse',
+              image: './assets/images/colombia_tasse.png',
             },
             {
               id: 4,
               text: 'Paquet',
+              image: './assets/images/colombia_paquet.png',
             }
           ],
         packets: [
@@ -50,6 +54,9 @@ const app = Vue.createApp({
     methods: {
         addToCart: function() {
             this.cart += 1;
+        },
+        updateImage: function(id) {
+            this.image = this.carouselImages[id].image
         },
     }
   });
