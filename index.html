@@ -37,8 +37,18 @@
       </div>
 
       <!-- v-on:click fail la même chose que @click -->
-      <button @click="addToCart" :style="styles.roundButton">Ajouter au panier</button>
-      <button @click="removeFromCart" :style="styles.roundButton">Retirer du panier</button>
+      <button
+        @click="addToCart"
+        :style="styles.roundButton"
+        :disabled="stock <= 0"
+        :class="{ disabledButton: stock <= 0 }"
+      >Ajouter au panier</button>
+      <button
+        @click="removeFromCart"
+        :style="styles.roundButton"
+        :disabled="stock <= 0"
+        :class="{ disabledButton: stock <= 0 }"
+      >Retirer du panier</button>
       <div>panier({{ cart }})</div>
       
       <div v-show="onSale">
