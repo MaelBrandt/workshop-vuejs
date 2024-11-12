@@ -24,61 +24,8 @@
       <a v-bind:href="url">{{ title }}</a>
       <p>{{desc}}</p> 
 
-      <strong>Type d'objet en vente</strong><br>
-      <img height="200" v-bind:src="image" :class="[stock <= 0 ? 'noStockImg' : '']"/>
-      <div>
-        <span
-          v-for="(carouselImage, index) in carouselImages"
-          :key="carouselImage.id"
-          @mouseover="updateSelectedImage(index)" 
-        >
-          <img height="50" alt="carouselImage.text" :src="carouselImage.image" />
-        </span>
-      </div>
+      <product-display></product-display>
 
-      <!-- v-on:click fail la même chose que @click -->
-      <button
-        @click="addToCart"
-        :style="styles.roundButton"
-        :disabled="stock <= 0"
-        :class="{ disabledButton: stock <= 0 }"
-      >Ajouter au panier</button>
-      <button
-        v-on:click="removeFromCart"
-        :style="styles.roundButton"
-        :disabled="stock <= 0"
-        :class="{ disabledButton: stock <= 0 }"
-      >Retirer du panier</button>
-      <div :class="[cart > 0 ? 'cartFilled' : '']">Panier({{ cart }})</div>
-      
-      <div v-show="onSale">
-        <br/>En Vente !
-
-        <p v-if="inStock">Disponible</p>
-        <p v-else>Plus de stock</p>
-  
-        <p v-if="stock > 10">Disponible</p>
-        <p v-else-if="stock <= 10 && stock > 0">Peu de stock</p>
-        <p v-else>Plus de stock</p>
-      </div>
-
-      
-
-      <strong>flaveur de nos caffés</strong><ul>
-        <li
-          v-for="detail in details"
-          :key="detail.id"
-          :style="{ color: detail.color }"
-        >
-          {{ detail.text }}
-        </li>
-      </ul>
-
-      <strong><br/>Paquets</strong>
-      <div v-for="packet in packets" :key="packets.id">
-        quantité : {{ packet.quantity }}
-        prix : {{ packet.price}} €
-      </div>
     </div>
 
     <!--Bootstrap-->
@@ -96,7 +43,6 @@
 
     <!--Notre JS contenant notre app Vue-->
     <script src="./main.js"></script>
-
     
     <script>
       const mountedApp = app.mount('#app');
